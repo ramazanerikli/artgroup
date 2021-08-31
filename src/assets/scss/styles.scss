@@ -1,0 +1,370 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$enable-responsive-font-sizes: true;
+
+// Layout
+.container {
+  max-width: 1280px;
+}
+
+.container-fluid {
+  max-width: 1920px;
+}
+
+.intro {
+  padding-bottom: 80px;
+  .container-fluid {
+    position: relative;
+  }
+  .intro-effect {
+    background-image: url("../img/effect.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 480px;
+    height: 490px;
+    position: absolute;
+    left: 0;
+  }
+  .text-sm {
+    color: rgba(141, 151, 173, 1);
+    max-width: 665px;
+  }
+  .text-md {
+    max-width: 665px;
+  }
+  .headline {
+    margin: 100px 0;
+  }
+  .hero-content {
+    position: relative;
+    .hero-image {
+      filter: drop-shadow(0px 16px 27px rgba(121, 128, 145, 0.361));
+      width: 100%;
+      max-width: 513px;
+      text-align: right;
+      z-index: 1;
+    }
+    .effect-round {
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      top: -89px;
+      width: 100%;
+      max-width: 552px;
+    }
+  }
+}
+
+.context {
+  background-color: $bg-color;
+  .title {
+    color: $dark;
+    margin-bottom: 100px;
+  }
+  .subtitle {
+    color: $dark;
+    margin-bottom: 70px;
+    font-weight: 300;
+  }
+  .stage {
+    margin-bottom: 130px;
+    .circle {
+      width: 88px;
+      height: 88px;
+      color: $secondary-color;
+      background-color: $white;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.102));
+      .stage-number {
+        font-size: $font-lg;
+        font-weight: 600;
+        font-family: "Lato";
+        margin-bottom: 0;
+      }
+    }
+    .stage-desc {
+      color: rgba(141, 151, 173, 1);
+    }
+  }
+  form {
+    input {
+      display: none;
+    }
+    label {
+      width: 277px;
+      height: 87px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 4px solid $secondary-color;
+      color: $secondary-color;
+      border-radius: 8px;
+      font-family: "Lato";
+      font-weight: 600;
+      transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+      }
+    }
+    .active {
+      background-color: #32a277;
+      border-color: #32a277;
+      color: $white;
+    }
+    #send-btn {
+      background: #32a277;
+      border: none;
+      color: rgba(255, 255, 255, 1);
+      width: 159px;
+      height: 44px;
+      border-radius: 4px;
+      font-family: "Lato";
+      font-weight: 600;
+      margin-bottom: 70px;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .info {
+      font-family: "Lato";
+      color: rgba(141, 151, 173, 1);
+      margin-top: 80px;
+      margin-bottom: 70px;
+    }
+  }
+  #warning {
+    visibility: hidden;
+    color: $secondary-color;
+  }
+  .slider-wrapper {
+    .slider {
+      .prev-arrow {
+        left: -40px;
+      }
+      .next-arrow {
+        right: -40px;
+      }
+      .slick-slide {
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .slide-content {
+          .slide-mask {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            background: black;
+            mask-image: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              from(rgba(0, 0, 0, 0)),
+              to(rgba(0, 0, 0, 1))
+            );
+            -webkit-mask-image: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              from(rgba(0, 0, 0, 0)),
+              to(rgba(0, 0, 0, 1))
+            );
+          }
+          position: relative;
+          .slide-desc {
+            position: absolute;
+            bottom: 0;
+            color: rgba(255, 255, 255, 1);
+            padding: 0 20px;
+          }
+          .slide-text {
+            color: rgba(255, 255, 255, 1);
+            font-family: "Lato";
+            font-weight: 300;
+          }
+        }
+      }
+      .arrow {
+        color: $light-gray;
+        transition: background-image 0.2s ease-in-out;
+        -webkit-transition: background-image 0.2s ease-in-out;
+        -moz-transition: background-image 0.2s ease-in-out;
+        -o-transition: background-image 0.2s ease-in-out;
+        cursor: pointer;
+        font-size: $font-lg;
+        z-index: 2;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      .next-arrow {
+        position: absolute;
+        top: 50%;
+      }
+
+      .prev-arrow {
+        position: absolute;
+        top: 50%;
+      }
+    }
+    .slider-effect {
+      width: 253px;
+      height: 186px;
+      background-image: url("../img/effect-bottom.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.footer {
+  padding: 40px 0;
+  .social-links {
+    padding: 0;
+    margin: 0;
+    float: right;
+    li {
+      list-style: none;
+      float: left;
+      margin: 0 10px;
+      background-color: $light;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        i {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+  .footer-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style: none;
+      a {
+        color: $light-gray;
+        font-family: "Lato";
+      }
+    }
+  }
+  .footer-subtitle {
+    color: $light-gray;
+    font-family: "Lato";
+  }
+  .copyright {
+    color: $light-gray;
+    font-family: "Lato";
+  }
+  .footer-link {
+    color: $light-gray;
+    font-family: "Lato";
+  }
+}
+
+.slick-track {
+  margin: 0 -10px;
+}
+.slick-slide {
+  margin: 0 10px;
+}
+
+// Font responsiveness
+.slide-title {
+  @include font-size(1.688rem);
+}
+.headline {
+  @include font-size(2.25rem);
+}
+.text-sm {
+  @include font-size(1rem);
+}
+.text-md {
+  @include font-size(1.688rem);
+}
+.stage-desc {
+  @include font-size(1rem);
+}
+label {
+  @include font-size(2.5rem);
+}
+.info {
+  @include font-size(1rem);
+}
+.slide-text {
+  @include font-size(1rem);
+}
+.footer-subtitle {
+  @include font-size(1rem);
+}
+.footer-list li a {
+  @include font-size(1rem);
+}
+.copyright {
+  @include font-size(1rem);
+}
+.footer-link {
+  @include font-size(1rem);
+}
+#send-btn {
+  @include font-size(0.844rem);
+}
+
+// Additional media queries
+@media (max-width: 1200px) {
+  .slider-wrapper {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-content {
+    text-align: center;
+  }
+  .intro-text-content {
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .intro-text-content {
+    padding-right: 80px;
+  }
+}
