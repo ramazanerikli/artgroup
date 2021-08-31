@@ -51,10 +51,18 @@ $('.slider').slick({
 const sendBtn = document.getElementById("send-btn");
 const warningMsg = document.getElementById('warning');
 
-// Equalize slide and effect width
-const slide = document.querySelector('.slick-slide');
-let slideWidth = slide.offsetWidth;
-document.getElementById('slider-effect').style.width = slideWidth + "px";
+function detectResize() {
+  // Equalize slide and effect width
+  const slide = document.querySelector('.slick-slide');
+  let slideWidth = slide.offsetWidth;
+  document.getElementById('slider-effect').style.width = slideWidth + "px";
+  document.getElementById('slider-effect').style.height = slideWidth + "px";
+}
+
+detectResize();
+
+window.onresize = detectResize;
+
 
 // Show warning message
 sendBtn.onclick = function () {
@@ -74,5 +82,6 @@ options.forEach(option => {
         this.classList.add('active');
     })
 })
+
 
 
