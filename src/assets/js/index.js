@@ -59,7 +59,10 @@ function detectResize() {
   document.getElementById('slider-effect').style.height = slideWidth + "px";
 }
 
-detectResize();
+// Detect resize event when page loaded
+document.addEventListener('DOMContentLoaded', function() {
+  detectResize();
+}, false);
 
 window.onresize = detectResize;
 

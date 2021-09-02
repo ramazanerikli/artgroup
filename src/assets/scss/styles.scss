@@ -5,15 +5,6 @@
 
 $enable-responsive-font-sizes: true;
 
-// Layout
-.container {
-  max-width: 1280px;
-}
-
-.container-fluid {
-  max-width: 1920px;
-}
-
 .intro {
   padding-bottom: 80px;
   .container-fluid {
@@ -87,7 +78,6 @@ $enable-responsive-font-sizes: true;
       margin-bottom: 30px;
       filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.102));
       .stage-number {
-        font-size: $font-lg;
         font-weight: 600;
         font-family: "Lato";
         margin-bottom: 0;
@@ -304,55 +294,60 @@ $enable-responsive-font-sizes: true;
 
 // Font responsiveness
 .slide-title {
-  @include font-size(1.688rem);
+  @include font-size($font-md);
 }
 .headline {
-  @include font-size(2.25rem);
+  @include font-size($font-lg);
 }
 .text-sm {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .text-md {
-  @include font-size(1.688rem);
+  @include font-size($font-md);
 }
 .stage-desc {
-  @include font-size(1rem);
+  @include font-size($font-sm);
+}
+.stage-number {
+  @include font-size($font-lg);
 }
 label {
-  @include font-size(2.5rem);
+  @include font-size($font-xl);
 }
 .info {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .slide-text {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .footer-subtitle {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .footer-list li a {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .copyright {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 .footer-link {
-  @include font-size(1rem);
+  @include font-size($font-sm);
 }
 #send-btn {
   @include font-size(0.844rem);
 }
 
-
-
-
-// Additional media queries
-@media (max-width: 1200px) {
-  .slider-wrapper {
-    padding: 0 40px;
-  }
+// Layout
+.container {
+  max-width: 1280px;
 }
 
+.container-fluid {
+  max-width: 1920px;
+}
+
+// Additional media queries
+
+// Small devices
 @media (max-width: 576px) {
   .social-links {
     display: flex;
@@ -367,6 +362,7 @@ label {
   }
 }
 
+// Medium devices (tablets, 768px and up)
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-content {
     text-align: center;
@@ -376,6 +372,7 @@ label {
   }
 }
 
+// X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .container-fluid {
     padding-left: 120px;
@@ -392,8 +389,15 @@ label {
   }
 }
 
+// XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1500px) {
   .intro .hero-content {
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider-wrapper {
+    padding: 0 40px;
   }
 }

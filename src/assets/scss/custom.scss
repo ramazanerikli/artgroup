@@ -11,8 +11,8 @@ $dark: #3e4555;
 $light-gray: #8d97ad;
 $light: #f8f9fa;
 $white: #fff;
-$font-xl: 40px;
-$font-sm: 16px;
+$font-xl: 2.5rem;
+$font-sm: 1rem;
 $font-lg: 2.25rem;
 $font-md: 1.688rem;
 
@@ -57,24 +57,4 @@ p button {
 span {
   margin: 0.6em;
   display: inline-block;
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
 }
