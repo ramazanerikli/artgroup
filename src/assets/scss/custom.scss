@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;500;700&display=swap");
-
-$font-stack: "Playfair Display", serif !important;
-$font-secondary: "Lato";
-
 // Variables
+
+// Color
 $primary-color: #32a277;
 $secondary-color: #e2536b;
 $bg-color: #f5f7fa;
@@ -11,13 +8,23 @@ $dark: #3e4555;
 $light-gray: #8d97ad;
 $light: #f8f9fa;
 $white: #fff;
+
+// Font size
 $font-xl: 2.5rem;
 $font-sm: 1rem;
 $font-lg: 2.25rem;
 $font-md: 1.688rem;
 
+// Font weight
+$font-regular: 400;
+$font-bold: 700;
+
+// Font family
+$font-primary: "Playfair Display", serif!important;
+$font-secondary: 'Lato', sans-serif!important;
+
 body {
-  font-family: $font-stack;
+  font-family: $font-primary;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -44,7 +51,6 @@ span {
 
 p {
   text-align: center;
-  font-family: $font-secondary;
 }
 
 p button {
