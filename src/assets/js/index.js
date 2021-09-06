@@ -48,8 +48,8 @@ $('.slider').slick({
   });
 
 // Global variables  
-const sendBtn = document.getElementById("send-btn");
-const warningMsg = document.getElementById('warning');
+var sendBtn = document.getElementById("send-btn");
+var warningMsg = document.getElementById('warning');
 
 function detectResize() {
   // Equalize slide and effect width
@@ -59,11 +59,9 @@ function detectResize() {
   document.getElementById('slider-effect').style.height = slideWidth + "px";
 }
 
-// Detect resize event when page loaded
-document.addEventListener('DOMContentLoaded', function() {
-  detectResize();
-}, false);
+detectResize();
 
+// Call detectResize function when resize screen
 window.onresize = detectResize;
 
 

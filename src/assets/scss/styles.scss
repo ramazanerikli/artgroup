@@ -21,19 +21,14 @@ $enable-responsive-font-sizes: true;
   }
   .text-top {
     color: rgba(141, 151, 173, 1);
-    max-width: 665px;
     font-family: $font-secondary;
   }
   .text-bottom {
     font-weight: $font-regular;
-    max-width: 665px;
   }
   .headline {
     font-weight: $font-bold;
     margin: 100px 0;
-  }
-  .hero-container {
-    padding: 0 0 72px 0;
   }
   .hero-content {
     position: relative;
@@ -46,13 +41,18 @@ $enable-responsive-font-sizes: true;
     }
     .effect-round {
       position: absolute;
-      right: 0;
       z-index: -1;
       top: -89px;
       width: 100%;
       max-width: 552px;
     }
   }
+}
+
+.information-image {
+    position: absolute;
+    top: 83px;
+    right: 137px;
 }
 
 .context {
@@ -191,10 +191,13 @@ $enable-responsive-font-sizes: true;
             color: rgba(255, 255, 255, 1);
             padding: 0 20px;
           }
+          .slide-title {
+            font-weight: $font-bold;
+          }
           .slide-text {
             color: rgba(255, 255, 255, 1);
             font-family: $font-secondary;
-            font-weight: 300;
+            font-weight: $font-regular;
           }
         }
       }
@@ -357,11 +360,11 @@ label {
     justify-content: center;
     width: 100%;
   }
-  .hero-content {
-    margin-top: 100px;
-  }
-  .intro .hero-content {
-    padding: 0 25px 0 25px;
+  .intro {
+    .hero-content {
+      padding: 0 25px 0 25px;
+      margin-top: 100px;
+    }
   }
 }
 
@@ -375,14 +378,41 @@ label {
   }
 }
 
+// Ipad Pro
+@media only screen and (min-width: 1024px) and (max-width: 1366px) { 
+  .intro {
+    .hero-content {
+      .hero-image {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .container-fluid {
     padding-left: 120px;
     padding-right: 120px;
   }
-  .intro-text-content {
-    padding-right: 80px;
+  .intro {
+    .intro-text-content {
+      padding-right: 80px;
+      .text-top {
+        max-width: 665px;
+      }
+      .text-bottom {
+        max-width: 665px;
+      }
+    }
+    .hero-container {
+      padding: 0 0 72px 0;
+      .hero-content {
+        .effect-round {
+          right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -394,8 +424,16 @@ label {
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1500px) {
-  .intro .hero-content {
-    justify-content: space-around;
+  .intro {
+    .hero-container {
+      padding: 0 0 72px 0;
+      .hero-content {
+        justify-content: space-around;
+        .effect-round {
+          right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -404,3 +442,4 @@ label {
     padding: 0 40px;
   }
 }
+
