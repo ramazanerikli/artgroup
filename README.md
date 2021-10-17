@@ -2,7 +2,8 @@
 
 [Click](https://ramazanerikli.github.io/webpack-project/) for DEMO.
 
-#### Features
+#### Technologies Used
+- Webpack
 - Bootstrap
 - SASS
 - FontAwesome
