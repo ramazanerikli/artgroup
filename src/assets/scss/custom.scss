@@ -1,27 +1,32 @@
 // Variables
 
 // Color
-$primary-color: #32a277;
-$secondary-color: #e2536b;
-$bg-color: #f5f7fa;
-$dark: #3e4555;
-$light-gray: #8d97ad;
-$light: #f8f9fa;
-$white: #fff;
+
+$gray: #919191;
+$dark: #414141;
+$light-bg: #fff;
+$accent-light: #D9B0E8;
+$accent-dark: #5D4565;
+
+$secondary: #5080EB;
+$success: #45BB7F;
+
+$border: #D9D9D9;
+
 
 // Font size
-$font-xl: 2.5rem;
-$font-sm: 1rem;
-$font-lg: 2.25rem;
-$font-md: 1.688rem;
+$font-sm: 2.625rem;
+$font-lg: 4.5rem;
+$font-md: 3.25rem;
+$font-xsm: 1.188rem;
+$font-xxsm: 0.813rem;
 
 // Font weight
 $font-regular: 400;
-$font-bold: 700;
+$font-bold: 500;
 
 // Font family
-$font-primary: "Playfair Display", serif!important;
-$font-secondary: 'Lato', sans-serif!important;
+$font-primary: 'Fira Sans', sans-serif;
 
 body {
   font-family: $font-primary;
@@ -34,33 +39,20 @@ html {
   max-width: 100%;
 }
 
-h1,
-p {
-  color: $dark;
+.font-large {
+  font-size: $font-lg;
 }
 
-button,
-span {
-  a,
-  a:visited,
-  a:hover {
-    color: #fff;
-    text-decoration: none !important;
-  }
+.font-medium {
+  font-size: $font-md;
 }
 
-p {
-  text-align: center;
+
+.btn.btn-light {
+  background-color: $light-bg;
+  border: 1px solid $dark;
 }
 
-p button {
-  margin: 0 auto;
-  padding: 1em;
-  display: block;
-  margin-top: 0.5em !important;
-}
-
-span {
-  margin: 0.6em;
-  display: inline-block;
+.btn.btn-dark {
+  background-color: $dark;
 }

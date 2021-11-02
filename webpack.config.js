@@ -83,7 +83,7 @@ module.exports = {
       filename: "assets/css/styles.css"
     }),
     new HtmlWebpackPlugin({
-      title: "Frontend Project",
+      title: "Screets Admin Template",
       template: "src/index.html",
       inject: true,
       minify: {
